@@ -1,0 +1,70 @@
+.no-margin{
+    margin: 0;
+}
+
+.no-padding{
+    padding: 0;
+}
+
+.lives{
+    background: #ff00e1;
+    opacity: 0.3;
+    visibility: visible !important;
+}
+
+.welcome{
+    padding: 42px 65px;
+    background-color: #1C2225;
+    color: gainsboro;
+}
+.content{
+    background-color: #121618;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+.absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.welcome .inner{
+    padding: 20px;
+    text-align: center;
+}
+
+.hidden{
+    display: none !important;
+}
+
+.controls{
+    position: absolute;
+    bottom: 30px !important;
+    right: 30px;
+    z-index: 50000;
+}
+
+.form-control{
+    margin-bottom: 10px;
+}
+.dimmed{
+    opacity: 0.3 !important;
+}
+.controls .btn{
+    color: #1C2225;
+}
+
+.settings .advanced-st{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #333;
+}
+
+
+#load-adv{
+    clear: both;
+}
