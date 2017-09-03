@@ -7,8 +7,8 @@
 
 
 var GameOfLife = function(){
-    this.seed = 20
-    this.dimensions = 50
+    this.seed = 50
+    this.dimensions = 20
     this.playfield;
     this.advLives = [];
     this.ticksInterval;
@@ -64,15 +64,15 @@ var GameOfLife = function(){
         if(this.dimensions > 100){
             alert("Sorry, you can't do that.. \nmax resolution for board is set to 100*100");
             e.target.value = "";
-            this.dimensions = 50;
+            this.dimensions = 20;
             return;
         }
 
         var board = document.getElementById("mini-board");
         board.innerHTML = "";
         
-        var cellHeight = (window.innerHeight * 0.4) / this.dimensions,
-            cellWidth = (window.innerWidth * 0.4) / this.dimensions, 
+        var cellHeight = (window.innerHeight * 0.4) / this.dimensions -2,
+            cellWidth = (window.innerWidth * 0.4) / this.dimensions -2, 
             row;
 
             
@@ -290,7 +290,7 @@ var GameOfLife = function(){
             if(this.playfield[y -1][x].alive){
                 aliveNeighbours ++;
             }
-            if(x < this.dimensions -1 && this.playfield[y -1][x +1]){
+            if(x < this.dimensions -1 && this.playfield[y -1][x +1].alive){
                 aliveNeighbours ++;
             }
         }

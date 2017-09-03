@@ -79,6 +79,7 @@
     left: 30px;
     opacity: 0.5;
     cursor: pointer;
+    z-index: 500000;
 }
 
 
