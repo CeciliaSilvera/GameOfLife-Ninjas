@@ -7,7 +7,7 @@
 }
 
 .lives{
-    background: #ff00e1;
+    background-color: #ff00e1;
     opacity: 0.3;
     visibility: visible !important;
 }
@@ -17,19 +17,23 @@
     background-color: #1C2225;
     color: gainsboro;
 }
-.content{
+.content, #game-over{
     background-color: #121618;
     position: fixed;
     height: 100%;
     width: 100%;
 }
 
+#game-over{
+    z-index: 5000000;
+}
 .absolute-center {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 
 .welcome .inner{
     padding: 20px;
@@ -67,4 +71,58 @@
 
 #load-adv{
     clear: both;
+}
+
+#ninjas, #four-clover{
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+
+.ninja .kenny.lives{
+    background-image: url(Kenny-ninja.png);
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-color: transparent;
+}
+
+.ninja .cartman.lives{
+    background-image: url(cartman-ninja.png);
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-color: transparent;
+}
+
+.ninja .butters.lives{
+    background-image: url(Ninja-butters.png);
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-color: transparent;
+}
+
+.ninja .clyde.lives{
+    background-image: url(ninja-clyde.png);
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-color: transparent;
+}
+
+#game-over img{
+    display: none;
+}
+.ninja #game-over img{
+    display: inline-block;
+}
+
+.ninja h1.absolute-center{
+    padding-top: 270px !important;
+    color: #fafafa;
+    opacity: 0.5;
+}
+
+#game-over h1.absolute-center{
+    padding-top: 0;
 }

@@ -15,30 +15,32 @@
         <div class="content">
             <div class="welcome absolute-center">
                     <div class="inner">
-                        <h1>Game Of Life</h1>
+                        <h1>Game Of <span id="title-name">Life</span></h1>
                         <div class="settings no-margin no-padding">
-                            <input class="form-control" id="dimensions" type="number" placeholder="dimensions&sup2;">
-                            <input class="form-control" id="ticks" type="number" placeholder="speed / ms">
+                            <input class="form-control" id="dimensions" type="number" max="100" placeholder="dimensions&sup2;">
+                            <input class="form-control" id="ticks" type="number" placeholder="ms / generation">
                             <input class="form-control" id="seed" type="number" placeholder="seed">
-                            <div class="btn btn-block" id="load">
+                            <div type="button" class="btn btn-block" id="load">
                                 <i class="fa fa-sign-in fa-fw" aria-hidden="true"></i>
-                                load universe
+                                load <span id="territory">universe</span>
                             </div>
                             <div class="btn advanced-st">advanced seeding</div>
                         </div>
                         <div class="settings-adv hidden no-margin no-padding text-left">
                             <input class="form-control" id="dimensions-adv" type="number" placeholder="dimensions&sup2;">
-                            <input class="form-control" id="ticks-adv" type="number" placeholder="speed / ms">
+                            <input class="form-control" id="ticks-adv" type="number" placeholder="ms / generation">
                             select seeds
                             <div id="mini-board"></div>
                             <div class="btn btn-block" id="load-adv">
                                 <i class="fa fa-sign-in fa-fw" aria-hidden="true"></i>
-                                load universe
+                                load <span id="territory-adv">universe</span>
                             </div>
                         </div>
                         
                     </div>
             </div>
+            <img id="four-clover" title="original theme" class="hidden" src="Green-Four-Leaf-Clover-Fractal-No-Background-2400px.png" width="30px;"/>
+            <img id="ninjas" title="ninja mode" src="ninja-clan.png" width="100px;">
             <div class="controls hidden">
                 <div class="btn-group">
                     <div class="btn" id="reload">
@@ -51,6 +53,12 @@
             </div>
             <div id="board">
 
+            </div>
+
+            <div id="game-over" class="hidden">
+                <img class="absolute-center" src="game-over.png" width="200px;">
+                
+                <h1 class="absolute-center">Game Over</h1>
             </div>
         </div>
         <script type="text/javascript" src="gameOfLife.js"></script>
